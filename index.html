@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin-Form-Validation</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="slider-image">
+        <img
+          class="big-img"
+          src="slider-image.jpg"
+          alt="slider-image"
+          width="100%"
+        />
+        <h1 style="font-size: 30px">ODIN PROJECT</h1>
+        <div class="foreground"></div>
+      </div>
+      <div class="content">
+        <img
+          class="logo"
+          src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+          alt=""
+        />
+        <img class="bg" src="./viking.jpg" alt="" />
+        <div class="form">
+          <h2>Welcome to Valhalla</h2>
+          <form action="" method="post">
+            <div class="row-flex">
+              <div>
+                <label for="first-name"
+                  >First Name <span class="star">*</span></label
+                ><br />
+                <input
+                  class="input-focus"
+                  type="text"
+                  id="first-name"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  pattern="[A-Za-z]+"
+                />
+              </div>
+              <div>
+                <label for="last-name">Last Name</label><br />
+                <input
+                  class="input-focus"
+                  type="text"
+                  id="last-name"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  pattern="[A-Za-z]+"
+                />
+              </div>
+            </div>
+            <div class="row-flex">
+              <div>
+                <label for="email">Email<span class="star">*</span></label
+                ><br />
+                <input class="input-focus" type="email" id="email" />
+              </div>
+              <div>
+                <label for="phone-number">Phone Number</label><br />
+                <input
+                  class="input-focus"
+                  type="text"
+                  id="phone-number"
+                  required
+                  minlength="10"
+                  pattern="[0-9]+"
+                />
+              </div>
+            </div>
+            <div class="row-flex">
+              <div>
+                <label for="password">Password<span class="star">*</span></label
+                ><br />
+                <input
+                  class="input-focus"
+                  type="password"
+                  id="password"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
+                />
+              </div>
+              <div>
+                <label for="confirm-password"
+                  >Confirm Password<span class="star">*</span></label
+                ><br />
+                <input
+                  class="input-focus"
+                  type="password"
+                  id="confirm-password"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
+                />
+              </div>
+            </div>
+            <div class="button">
+              <button type="submit">Create Account</button>
+              <p>Already have a account? <a href="/index.html">Log-In</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

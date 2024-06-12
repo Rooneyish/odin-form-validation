@@ -1,0 +1,261 @@
+/* General Resets */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Shanti&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Custom Properties */
+:root {
+  --primary-color: #0c0c10;
+  --secondary-color: #c7c7c7;
+  --focus-color: #9e9ed3;
+  --valid-color: #5d8f4f;
+  --invalid-color: #8f4f4f;
+}
+
+@font-face {
+  font-family: vikings;
+  src: url(./woodwarrior/Woodwarrior/Woodwarrior-Regular.otf);
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Body and Main Structure */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--primary-color);
+  margin: 0;
+  animation: transitionIn 1s;
+}
+h1,
+h2 {
+  font-family: vikings;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  margin-left: 35%;
+}
+
+main img {
+  height: 100vh;
+}
+
+.foreground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background-color: var(--focus-color);
+  opacity: 15%;
+  z-index: 1;
+}
+
+.slider-image {
+  position: relative;
+}
+
+.big-img {
+  border-right: 10px solid var(--secondary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider-image h1{
+  position: fixed;
+  top: 40%;
+  left: 19%;
+  color: var(--secondary-color);
+  font-size: 100px;
+  text-align: center;
+  z-index: 3;
+}
+
+.logo {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 100vh;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bg {
+  position: absolute;
+  z-index: 0;
+  opacity: 10%;
+  width: 65%;
+  align-items: end;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
+.form {
+  z-index: 1;
+}
+/* Form Styling */
+.star {
+  color: var(--invalid-color);
+}
+.content form {
+  color: var(--secondary-color);
+  text-align: start;
+}
+
+.content form label {
+  font-family: "Shanti";
+  font-size: 16px;
+}
+
+.content form input {
+  font-family: "Exo 2";
+  width: 110%;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 120px;
+}
+
+.input-focus:focus {
+  color: var(--focus-color);
+  border: 2px solid var(--focus-color);
+  transition: 0.3s;
+}
+
+.input-focus:focus:invalid{
+  border: 2px solid var(--invalid-color);
+  transition: 0.3s;
+}  
+
+.input-focus:focus:valid{
+  border: 2px solid var(--focus-color);
+  transition: .3s;
+}
+
+button[type="submit"] {
+  font-family: "Shanti";
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--focus-color);
+  transition: 0.3s;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.button p {
+  font-family: "Exo 2";
+  align-self: end;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.button p > a {
+  text-decoration: none;
+  font-family: "Exo 2";
+  font-weight: bolder;
+  font-size: 18px;
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.button p > a:hover {
+  color: var(--focus-color);
+  transition: 0.3s;
+}
